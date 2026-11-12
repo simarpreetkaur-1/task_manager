@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFCFF"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Heading -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Task Manager"
+            android:textColor="#51465F"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="18dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Make today a little more productive!"
+            android:textColor="#92879F"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Progress Card -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E8DFF7"
+            android:padding="17dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Progress"
+                android:textColor="#51465F"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/taskCountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 of 0 tasks completed"
+                android:textColor="#70657E"
+                android:textSize="13sp"
+                android:layout_marginTop="8dp"/>
+
+            <ProgressBar
+                android:id="@+id/taskProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="12dp"
+                android:progressTint="#80CDB1"
+                android:progressBackgroundTint="#FFFFFF"
+                android:max="100"
+                android:progress="0"/>
+
+        </LinearLayout>
+
+        <!-- Add Task -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add a New Task"
+            android:textColor="#51465F"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/taskInput"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Write a task here..."
+            android:singleLine="true"
+            android:textSize="15sp"
+            android:padding="15dp"
+            android:backgroundTint="#B9A5DC"
+            android:inputType="textCapSentences"/>
+
+        <!-- Category -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Category"
+            android:textColor="#51465F"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="17dp"/>
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="5dp"
+            android:spinnerMode="dropdown"/>
+
+        <!-- Priority -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Priority"
+            android:textColor="#51465F"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp"/>
+
+        <Spinner
+            android:id="@+id/prioritySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="5dp"
+            android:spinnerMode="dropdown"/>
+
+        <!-- Add Button -->
+
+        <Button
+            android:id="@+id/addTaskButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="+ Add Task"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#A68BCB"
+            android:layout_marginTop="17dp"/>
+
+        <!-- Task List -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Tasks"
+            android:textColor="#51465F"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/emptyState"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:text="No tasks yet! &#10;Add something to get started."
+            android:textColor="#998DA7"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="#F1EDF8"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:id="@+id/taskListContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="One task at a time"
+            android:textColor="#B0A2BF"
+            android:textSize="12sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</ScrollView>
